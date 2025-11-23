@@ -17,7 +17,8 @@ def carregar_cadastro():
 
 @st.cache_data
 def carregar_e_limpar_financeiro():
-    df = pd.read_csv("dados_financeiros.csv")
+    URL_DO_ARQUIVO = "https://drive.google.com/uc?export=download&id=110srBvTbBOWr5ii6atT2zv3PMh5bXML_"
+    df = pd.read_csv(URL_DO_ARQUIVO)
 
     # Limpeza dos dados
     coluna_valores = df['Valor arrecadação'].astype(str).str.strip()
